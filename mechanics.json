@@ -1,0 +1,366 @@
+{
+  "version": 1,
+  "values": [
+    {
+      "name": "repeat cycle",
+      "group": "playback",
+      "value": "none -> all -> one -> none",
+      "source": "playerControls.xml repeat-button onRepeat"
+    },
+    {
+      "name": "hold-to-seek step",
+      "group": "playback",
+      "value": 15000,
+      "unit": "ms",
+      "source": "playerControls.xml forward/back skipLoop"
+    },
+    {
+      "name": "hold-to-seek interval",
+      "group": "playback",
+      "value": 1000,
+      "unit": "ms",
+      "source": "playerControls.xml setInterval(skipLoop, 1000)"
+    },
+    {
+      "name": "forward seek cap before end",
+      "group": "playback",
+      "value": 1000,
+      "unit": "ms",
+      "source": "playerControls.xml forward skipLoop duration - 1000"
+    },
+    {
+      "name": "shuffle algorithm",
+      "group": "playback",
+      "value": "Fisher-Yates over whole view, rand() % (i+1)",
+      "source": "sbMediacoreManager.dylib sbMediacoreShuffleSequenceGenerator::Init 0x99d0"
+    },
+    {
+      "name": "previous restarts song threshold",
+      "group": "playback",
+      "value": "none (always previous song)",
+      "estimated": true
+    },
+    {
+      "name": "repeat one on user Next",
+      "group": "playback",
+      "value": "moves to next song",
+      "estimated": true
+    },
+    {
+      "name": "play/pause hold menu delay",
+      "group": "controls",
+      "value": 2000,
+      "unit": "ms",
+      "source": "playerControls.xml playpause-button delayDuration"
+    },
+    {
+      "name": "mouse wheel volume step",
+      "group": "controls",
+      "value": 0.03,
+      "source": "scripts/mouseWheelVolume.js"
+    },
+    {
+      "name": "keyboard volume step",
+      "group": "controls",
+      "value": 0.05,
+      "source": "scripts/mainPlayerWindow.js cmd_volume_up/down"
+    },
+    {
+      "name": "next key",
+      "group": "controls",
+      "value": "Ctrl+Right",
+      "source": "layoutBaseOverlay.xul control-next-key"
+    },
+    {
+      "name": "previous key",
+      "group": "controls",
+      "value": "Ctrl+Left",
+      "source": "layoutBaseOverlay.xul control-previous-key"
+    },
+    {
+      "name": "play/pause key",
+      "group": "controls",
+      "value": "Space",
+      "source": "layoutBaseOverlay.xul control-playpause-key"
+    },
+    {
+      "name": "volume up/down keys",
+      "group": "controls",
+      "value": "Cmd+Up / Cmd+Down",
+      "source": "layoutBaseOverlay.xul volume-up-key"
+    },
+    {
+      "name": "mute key",
+      "group": "controls",
+      "value": "Cmd+Alt+Up/Down",
+      "source": "layoutBaseOverlay.xul volume-mute-key"
+    },
+    {
+      "name": "new playlist key",
+      "group": "controls",
+      "value": "Cmd+N",
+      "source": "songbird.dtd menu.file.new.key"
+    },
+    {
+      "name": "new smart playlist key",
+      "group": "controls",
+      "value": "Cmd+Alt+N",
+      "source": "songbird.dtd menu.file.smart.key"
+    },
+    {
+      "name": "search focus key",
+      "group": "controls",
+      "value": "Cmd+K",
+      "source": "songbird.dtd searchFocus.key"
+    },
+    {
+      "name": "total time click",
+      "group": "faceplate",
+      "value": "toggles remaining time",
+      "source": "playerControls.xml totaltime-label onTotalDown"
+    },
+    {
+      "name": "seek bar notches",
+      "group": "faceplate",
+      "value": 4,
+      "source": "gonzo mainplayer.xul .notches"
+    },
+    {
+      "name": "column Title width",
+      "group": "track list",
+      "value": 229,
+      "unit": "px",
+      "source": "sbColumnSpecParser.jsm fallback"
+    },
+    {
+      "name": "column Time width",
+      "group": "track list",
+      "value": 45,
+      "unit": "px",
+      "source": "sbColumnSpecParser.jsm fallback"
+    },
+    {
+      "name": "column Artist width",
+      "group": "track list",
+      "value": 137,
+      "unit": "px",
+      "source": "sbColumnSpecParser.jsm fallback"
+    },
+    {
+      "name": "column Album width",
+      "group": "track list",
+      "value": 210,
+      "unit": "px",
+      "source": "sbColumnSpecParser.jsm fallback"
+    },
+    {
+      "name": "column Genre width",
+      "group": "track list",
+      "value": 90,
+      "unit": "px",
+      "source": "sbColumnSpecParser.jsm fallback"
+    },
+    {
+      "name": "column Rating width",
+      "group": "track list",
+      "value": 90,
+      "unit": "px",
+      "source": "sbColumnSpecParser.jsm fallback"
+    },
+    {
+      "name": "column Type width",
+      "group": "track list",
+      "value": 78,
+      "unit": "px",
+      "source": "sbColumnSpecParser.jsm fallback"
+    },
+    {
+      "name": "default sort",
+      "group": "track list",
+      "value": "Artist ascending",
+      "source": "sbColumnSpecParser.jsm fallback 'a' flag"
+    },
+    {
+      "name": "filter lists",
+      "group": "track list",
+      "value": "Genre, Artist, Album",
+      "source": "mediapages/filtersPage.js defaultFilterSet"
+    },
+    {
+      "name": "row height",
+      "group": "look",
+      "value": 18,
+      "unit": "px",
+      "source": "gonzo bg-empty-table.png 36px two-row tile"
+    },
+    {
+      "name": "Highest Rated rule",
+      "group": "smart playlists",
+      "value": "rating > 3",
+      "source": "scripts/mainWinInit.js"
+    },
+    {
+      "name": "Recently Added window",
+      "group": "smart playlists",
+      "value": 30,
+      "unit": "days",
+      "source": "scripts/mainWinInit.js"
+    },
+    {
+      "name": "Recently Played window",
+      "group": "smart playlists",
+      "value": 7,
+      "unit": "days",
+      "source": "scripts/mainWinInit.js"
+    },
+    {
+      "name": "play count rule",
+      "group": "library",
+      "value": "+1 when a track plays to its end",
+      "estimated": true
+    },
+    {
+      "name": "resume position margin",
+      "group": "playback",
+      "value": 10000,
+      "unit": "ms",
+      "source": "sbMediacoreManager.dylib UpdateLastPositionProperty 0x12a23 (video only, not used for music)"
+    },
+    {
+      "name": "control pane height",
+      "group": "look",
+      "value": 53,
+      "unit": "px",
+      "source": "gonzo bg-media-control-pane.png"
+    },
+    {
+      "name": "faceplate height",
+      "group": "look",
+      "value": 44,
+      "unit": "px",
+      "source": "gonzo bg-faceplate.png"
+    },
+    {
+      "name": "browser tab strip auto-hide",
+      "group": "browser",
+      "value": true,
+      "source": "songbird-prefs.js browser.tabs.autoHide"
+    },
+    {
+      "name": "media tab first",
+      "group": "browser",
+      "value": true,
+      "source": "gonzo mainplayer.xul sb-tabbrowser hasmediatab"
+    },
+    {
+      "name": "new tab key",
+      "group": "browser",
+      "value": "Cmd+T",
+      "source": "songbird.dtd menu.file.newtab.key"
+    },
+    {
+      "name": "home page",
+      "group": "browser",
+      "value": "https://duckduckgo.com/",
+      "estimated": true
+    },
+    {
+      "name": "web search",
+      "group": "browser",
+      "value": "https://duckduckgo.com/?q=",
+      "estimated": true
+    },
+    {
+      "name": "web playlist enabled",
+      "group": "browser",
+      "value": true,
+      "source": "songbird-prefs.js songbird.webplaylist.enabled"
+    },
+    {
+      "name": "web playlist columns",
+      "group": "browser",
+      "value": "# 28, Title 280, Time 38, Artist 169, Album 159, Download 83",
+      "source": "songbird-prefs.js songbird.webplaylist.columnspec"
+    },
+    {
+      "name": "scraped attributes",
+      "group": "browser",
+      "value": "href, embed src, object data, param value, enclosure url",
+      "source": "scraperSteps.js xpath list"
+    },
+    {
+      "name": "drop playerID urls",
+      "group": "browser",
+      "value": true,
+      "source": "scraperSteps.js Hacks_DropBadUrls"
+    },
+    {
+      "name": "web track name",
+      "group": "browser",
+      "value": "file name",
+      "source": "scraperSteps.js trackName = url.fileName"
+    },
+    {
+      "name": "page rescan interval",
+      "group": "browser",
+      "value": 3,
+      "unit": "s",
+      "estimated": true
+    },
+    {
+      "name": "bookmark page key",
+      "group": "browser",
+      "value": "Cmd+D",
+      "source": "songbird.dtd bookmarkPage.key"
+    },
+    {
+      "name": "bookmarks in service pane",
+      "group": "browser",
+      "value": true,
+      "source": "gonzo colors.css servicesource-bookmarks, icon-bookmark.png"
+    },
+    {
+      "name": "app name",
+      "group": "design",
+      "value": "TuneCraft",
+      "source": "user request"
+    },
+    {
+      "name": "theme",
+      "group": "design",
+      "value": "follow system, dark fallback",
+      "source": "ArtCraft Launcher / PhotoCraft egui settings (app.ron, ui.ron)"
+    },
+    {
+      "name": "UI font",
+      "group": "design",
+      "value": "Inter",
+      "source": "VectorCraft ASSETS.md, PhotoCraft ATTRIBUTION.md"
+    },
+    {
+      "name": "number font",
+      "group": "design",
+      "value": "JetBrains Mono",
+      "source": "PhotoCraft ATTRIBUTION.md"
+    },
+    {
+      "name": "accent",
+      "group": "design",
+      "value": "#4e7bfb",
+      "source": "ArtCraft Launcher embedded logo SVG"
+    },
+    {
+      "name": "top bar height",
+      "group": "design",
+      "value": 48,
+      "unit": "pt",
+      "source": "ArtCraft Launcher app.ron top panel rect"
+    },
+    {
+      "name": "dark panel greys",
+      "group": "design",
+      "value": "#161618 / #1e1e21",
+      "estimated": true
+    }
+  ]
+}

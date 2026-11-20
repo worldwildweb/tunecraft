@@ -1,0 +1,14 @@
+TuneCraft
+Copyright (c) 2026 The TuneCraft contributors
+
+Licensed under either of the Apache License, Version 2.0 (LICENSE-APACHE) or the MIT
+license (LICENSE-MIT), at your option.
+
+This product bundles the Inter and JetBrains Mono typefaces, licensed under the SIL Open
+Font License 1.1 (assets/fonts/OFL-Inter.txt, assets/fonts/OFL-JetBrainsMono.txt).
+
+TuneCraft re-creates behaviour of the Songbird media player (Copyright (c) 2005-2010
+POTI, Inc.) from observation of the installed application; it contains no Songbird code or
+artwork. "Songbird" is a name of its respective owner and is not used for this product.
+
+See ATTRIBUTION.md for all third-party material.
